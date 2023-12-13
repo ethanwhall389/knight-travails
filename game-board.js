@@ -42,4 +42,8 @@ function knightMoves(startSquare, endSquare) {
 }
 
 
-buildGraph();
+const graph = buildGraph();
+
+graph.findShortestPath('0,0', '1,1');
+
+

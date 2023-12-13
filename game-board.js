@@ -1,7 +1,5 @@
 import Graph from "./graph.js";
 
-const moves = new Graph();
-
 
 const board = [
     ['0,0', '0,1', '0,2', '0,3'],
@@ -38,5 +36,10 @@ function buildGraph() {
     movesGraph.display();
     return movesGraph;
 }
+
+function knightMoves(startSquare, endSquare) {
+    
+}
+
 
 buildGraph();

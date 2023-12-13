@@ -25,7 +25,7 @@ export default class Graph {
       }
     }
     
-    findShortest(fromKey) {
+    findShortestPath(fromKey, toKey) {
       const root = this.adjacencyList[fromKey];
       let queue = [];
       let path = [];

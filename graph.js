@@ -26,20 +26,45 @@ export default class Graph {
     }
     
     findShortestPath(fromKey, toKey) {
-      const root = this.adjacencyList[fromKey];
-      let queue = [];
-      let path = [];
-      let cost = [];
-      root.forEach( (value) => {
-        queue.push([fromKey, value, 1]);
-      })
-      console.log(queue);
-      
+
+      let queue = [fromKey];
+      let visited = [];
+      let prev = [];
+
+      //While the queue still has content
       while (queue.length !== 0) {
         const node = queue.shift();
-        //if there is not yet a path to this node
-        
+        const siblings = this.adjacencyList[node];
+
+        for (let i = 0; i < siblings.length; i++) {
+          if (!visited.includes(siblings[i])) {
+            queue.push(siblings[i]);
+            visited.push(siblings[i]);
+            prev[siblings[i]] = node;
+          }
+        }
       }
+      console.log('Prev array:');
+      console.log(prev);
+
+      //Get path
+      let path = [];
+      let node = toKey;
+      path.push(node);
+      while (node !== fromKey) {
+        const previous = prev[node];
+        path.push(previous);
+        node = previous;
+      }
+
+      console.log('\nPath:')
+      console.log(path);
+
+      //Reverse path
+      let finalPath = path.reverse();
+      console.log(finalPath);
+
+      return finalPath;
     }
     
     display() {

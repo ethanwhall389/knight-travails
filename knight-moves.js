@@ -19,10 +19,13 @@ function knightMoves(startSquare, endSquare) {
     const RandomExclamation = getRandomExclamation();
     let moves;
     path.length > 1 ? moves = 'moves' : moves = 'move';
+    
     console.log(`${RandomExclamation} You made it in ${path.length} ${moves}:`);
     console.log(display);
+    
+    const message = `${RandomExclamation} You made it in ${path.length} ${moves}:
+    \n ${display}`;
+    return message;
 }
 
-
-
-knightMoves('2,2', '1,2');
+export default knightMoves;

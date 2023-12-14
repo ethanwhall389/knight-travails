@@ -37,9 +37,6 @@ function buildGraph() {
     return movesGraph;
 }
 
-function knightMoves(startSquare, endSquare) {
-    
-}
+const boardGraph = buildGraph();
 
-const graph = buildGraph();
-graph.findShortestPath('0,0', '1,0');
+export default boardGraph;

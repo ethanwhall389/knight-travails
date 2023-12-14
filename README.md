@@ -14,8 +14,8 @@ The program at a high level works as follows:
    ![image](https://github.com/ethanwhall389/knight-travails/assets/125170834/70c33e82-39dd-4a31-a3f7-a7addbd9407e)
 
 3. Creates a graph network consisting of:
-   a. squares as nodes.
-   b. possible moves as edges.
+ a. squares as nodes.
+b. possible moves as edges.
    visualized, this graph network looks something like this (for a 4x4 board):
 
 ![image](https://github.com/ethanwhall389/knight-travails/assets/125170834/7c109254-c3d1-4ea4-a4e1-2e85404eb78b)

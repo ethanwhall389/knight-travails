@@ -18,6 +18,7 @@ The program at a high level works as follows:
    a. squares as nodes.
 
    b. possible moves as edges.
+
    visualized, this graph network looks something like this (for a 4x4 board):
 
 ![image](https://github.com/ethanwhall389/knight-travails/assets/125170834/7c109254-c3d1-4ea4-a4e1-2e85404eb78b)

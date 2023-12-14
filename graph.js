@@ -44,8 +44,8 @@ export default class Graph {
           }
         }
       }
-      console.log('Prev array:');
-      console.log(prev);
+      // console.log('Prev array:');
+      // console.log(prev);
 
       //Get path
       let path = [];
@@ -57,56 +57,19 @@ export default class Graph {
         node = previous;
       }
 
-      console.log('\nPath:')
-      console.log(path);
+      // console.log('\nPath:')
+      // console.log(path);
 
       //Reverse path
       let finalPath = path.reverse();
-      console.log(finalPath);
+      // console.log(finalPath);
 
       return finalPath;
     }
     
     display() {
       Object.keys(this.adjacencyList).forEach( (key) => {
-        // console.log(this.adjacencyList[key][0]);
-        // console.log(this.adjacencyList[key][1]);
-        // console.log(this.adjacencyList[key][2]);
         console.log(`${key} -> ${this.adjacencyList[key]}`);
       })
     }
   }
-
-
-
-
-
-
-  
-  
-  // console.clear();
-  
-  // const graph = new Graph();
-  
-  // graph.addNode(1);
-  // graph.addNode(2);
-  // graph.addNode(3);
-  // graph.addNode(4);
-  // graph.addNode(5);
-  // graph.addNode(6);
-  // graph.addNode(7);
-  // graph.addNode(8);
-  // graph.addNode(9);
-  
-  // graph.addEdge(2, 7);
-  // graph.addEdge(2, 9);
-  // graph.addEdge(9, 4);
-  // graph.addEdge(4, 3);
-  // graph.addEdge(3, 8);
-  // graph.addEdge(6, 7);
-  // graph.addEdge(6, 1);
-  // graph.addEdge(1, 8);
-  
-  // graph.display();
-  
-  // graph.findShortest(6);

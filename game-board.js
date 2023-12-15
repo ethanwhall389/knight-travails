@@ -20,8 +20,10 @@ const possibleMoves = [
 function buildGraph() {
     const movesGraph = new Graph();
     //initial loop loops through the outer array (the rows)
+    console.log(`board length: ${board.length}`);
     for (let i = 0; i < board.length; i++) {
         //Second loop loops each individual square
+        console.log(board[i].length);
         for (let j = 0; j < board[i].length; j++) {
             const originalSquare = [i, j];
             //Loop the possible moves and see which moves current square can make
@@ -29,7 +31,7 @@ function buildGraph() {
                 const yAxis = move[0];
                 const xAxis = move[1];
                 const movedTo = [originalSquare[0] + yAxis, originalSquare[1] + xAxis];
-                if (movedTo[0] <= 3 && movedTo[0] >= 0 && movedTo[1] <= 3 && movedTo[1] >= 0) {
+                if (movedTo[0] <= 7 && movedTo[0] >= 0 && movedTo[1] <= 7 && movedTo[1] >= 0) {
                     // console.log('Possible moves for ' + originalSquare + ':');
                     // console.log(`${originalSquare} -> ${movedTo}`);
                     movesGraph.addEdge(originalSquare.toString(), movedTo.toString());
@@ -37,7 +39,7 @@ function buildGraph() {
             })
         }
     }
-    // movesGraph.display();
+    movesGraph.display();
     return movesGraph;
 }
 

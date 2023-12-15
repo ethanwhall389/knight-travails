@@ -1,5 +1,7 @@
 * {
     font-family: monospace;
+    color: white;
+    background-color: #171722;
 }
 
 body {
@@ -14,9 +16,22 @@ body {
     align-items: center;
     margin-top: 30px;
     padding-top: 30px;
-    border-top: 2px solid black;
+    border-top: 2px solid rgb(77, 77, 77)
+}
+
+img {
+    width: 600px;
+    height: auto;
 }
 
 .image-cont h3 {
     margin: 0;
+    padding-bottom: 15px;
+
+}
+
+input, .submit{
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 5px;
 }

@@ -1,5 +1,7 @@
 # Knight Travails
 
+Check out the live view here: https://ethanwhall389.github.io/knight-travails/
+
 This is an exercise in finding the shortest path for a knight in chess to take from one square to any other. It utilizes an adjacency list graph data structure.
 
 The chess board looks like this:
